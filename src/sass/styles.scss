@@ -1,0 +1,134 @@
+$font-stack: Myriad Pro, Helvetica, sans-serif;
+$background-color: #9d9d9d;
+
+$page-color-top: rgb(247,247,247);
+$page-color-bottom: rgb(240,240,240);
+
+$dark-blue-color: #221555;
+
+body {
+  margin: 0;
+  font: 100% $font-stack;}
+
+.page{
+  position: relative;
+  padding: 3em;
+  overflow: hidden;
+  background-color: $page-color-bottom;
+
+  &::before{
+    content:"";
+    position: absolute;
+    height: 500px;
+    width: 200%;
+    top: -220px;
+    left: -70%;
+    z-index: 5;
+    background: $page-color-top;
+    box-shadow: 0 0 10px $page-color-top;
+    border-radius: 100%;}
+}
+
+main{
+  position: relative;
+  z-index: 10;
+  margin-bottom: 170px;}
+
+h1 {
+  margin: 0.67em 0;
+  width: 100%;
+  font-size: 3em;
+  font-weight: lighter;
+  text-align: center;}
+
+figure{
+  text-align: center;}
+
+h2{
+  font-weight: normal;
+  font-size: 1.5em;
+  text-align: center;}
+
+h3{
+  margin: 0.75em 0 0.25em 0;
+  font-size: 1.5em;
+  font-weight: normal;
+
+  &::before{
+    content: "*";
+    margin-right: 0.1em;
+    color:$dark-blue-color;
+    font-weight: 900;}
+
+  a{
+    color:black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+
+    &:hover{
+      border-bottom: 2px solid black;}
+  }
+}//h3
+
+section{
+  margin-top: 2em;
+}
+
+footer{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 250px;
+  height: 250px;
+  background: url("curl.png");
+
+  a{
+    display: block;
+    position: absolute;
+    top: 162px;
+    left: 112px;
+    z-index: 35;
+    transform: rotate(-45deg);
+    color:$dark-blue-color;
+    font-weight: bold;
+    text-decoration: none;}
+}
+
+@media screen and (min-width: 30rem) {
+  body{
+    background-color:$background-color;
+    margin-top: 2em;}
+
+  h1{
+    margin: 0;
+    text-align: left;
+    font-size: 3em;
+    font-weight: lighter;}
+
+  h2{
+    margin: 0 0 1em;
+    text-align: left;}
+
+  figure{
+    float: left;
+    margin-top: 0;}
+}
+
+@media (min-width: 40rem) {
+  main{
+    margin-bottom: 0px;}
+
+  h1{
+    font-size: 5em;}
+}
+
+@media screen and (min-width: 48rem) {
+  main{
+    margin-bottom: 0px;}
+
+
+  .page{
+    padding: 3em;
+    margin: 5em auto 10em;
+    width: 600px;}
+}
