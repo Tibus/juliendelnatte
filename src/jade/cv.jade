@@ -32,13 +32,13 @@ html( lang="fr-BE" )
       main
         header
           h1
-            | Delnatte
+            | Julien Delnatte
+
+          h2
+            | Développeur full-stack, électronicien
             br/
-            = " "
-            | Julien
-          
-          h2 
-            | Développeur full-stack et électronicien
+            del coffee
+            |  maker
 
         figure
           img( alt="Julien Delnatte", src="assets/juliendelnatte.jpg" )
@@ -49,7 +49,10 @@ html( lang="fr-BE" )
           .content
             p Né le 
               time( datetime="1990-06-15" ) 15 juin 1990 
-              span.strong (25 ans)
+              span.strong (26 ans)  
+            p.strong
+              | Adresse : 
+              a( href="https://www.google.be/maps/place/Liège/@50.F,5,7z" ) Liège (Belgique)
             p.phone.strong
               | Tel : 
               a( href="tel:0032472786675" ) +32 472 78 66 75
@@ -58,7 +61,7 @@ html( lang="fr-BE" )
               a( href="mailto:julien.delnatte@gmail.com" ) julien.delnatte@gmail.com
             p.site.strong
               | URL : 
-              a( href="http://julien.delnatte.be", rel="external" ) julien.delnatte.be
+              a( href="http://julien.delnatte.be", rel="nofollow" ) julien.delnatte.be
 
         section#studies
           h3 Cursus
@@ -69,12 +72,12 @@ html( lang="fr-BE" )
                 | - 
                 time( datetime="2011-06-30" ) 2011 
               p
-                | Graduat en Techniques Infographiques à la Haute Ecole de la Province de Liège ( Bac +3 )
+                | Bachelor en Techniques Infographiques à la Haute Ecole de la Province de Liège
 
               p.description
-                | PFE : Réalisation d'un jeux vidéo 3D temps-réel sur Facebook ( BuroCrazy )
+                | PFE : Réalisation d'un jeux vidéo 3D temps-réel sur Facebook (BuroCrazy)
               p.skills
-                | ( Maya, AS3, Flash, MySQL, PHP, HTML5, CSS, JavaScript... )
+                | (Maya, AS3, Flash, MySQL, PHP, HTML5, CSS, JavaScript...)
             
             li
               h4 
@@ -83,17 +86,10 @@ html( lang="fr-BE" )
                 time( datetime="2008-06-30" ) 2008 
               p
                 | 5
-                sup ème
+                sup ème 
                 | et 6
-                sup ème
+                sup ème 
                 | secondaires : Qualification en Infographie à l’Institut St-Luc Liège
-            li
-              h4 
-                time( datetime="2002-09-01" ) 2002 
-                | - 
-                time( datetime="2006-06-30" ) 2006 
-              p
-                | Humanités générales : D.I.C. Collège Liège
                 
         section#distinctions
           h3 Distinctions
@@ -102,13 +98,13 @@ html( lang="fr-BE" )
               h4 
                 time( datetime="2011-06-30" ) 2011 
               p
-                | Graduat obtenu avec Grande Distinction, prix du Collège Provincial de Liège et prix Fernand Petit
+                | Graduat obtenu avec grande distinction, prix du Collège Provincial de Liège et prix Fernand Petit
             
             li
               h4 
                 time( datetime="2008-06-30" ) 2008 
               p
-                | Qualification en infographie à l’Institut St-Luc obtenue avec mention et félicitations du Jury
+                | Qualification en Infographie à l’Institut St-Luc obtenue avec mention et félicitations du jury
                 
         section#parcours
           h3 Expériences
@@ -116,18 +112,35 @@ html( lang="fr-BE" )
             li
               h4 
                 .time 
+                  time( datetime="2015-01-01" ) Juin 2016 
+                  | - 
+                  time( datetime="2016-06-30" ) Mars 2017
+              p.title
+                | Développeur full-stack et électronicien chez 
+                a( href="http://www.dagoma.fr/", rel="nofollow" ) Dagoma 
+                | (Lille, France)
+              p.description
+                | Développement d'outils permettant la simplification de l'utilisation d'une imprimante 3D. 
+                | Développement de cartes électroniques sur mesure. 
+                | Développement de produits complets sur mesure (electronique, boitier imprimé, software...)
+              p.skills
+                | (Electron, Python, Eagle, Fusion360, Node.js, HTML5, CSS3, JavaScript...)
+                
+            li
+              h4 
+                .time 
                   time( datetime="2015-01-01" ) Janvier 2015 
                   | - 
-                  | en poste
-                p
-                  | Développeur full-stack et électronicien chez 
-                  a( href="http://www.neotrope.fr/", rel="external" ) Néotrope 
-                  | ( Lille, France )
+                  time( datetime="2016-06-30" ) Mai 2016 
+              p.title
+                | Développeur full-stack et électronicien chez 
+                a( href="http://www.neotrope.fr/", rel="nofollow" ) Néotrope 
+                | (Lille, France)
               p.description
-                | Création et développement d’un bracelet capteur d’émotions en bluetooth 
+                | Création et développement d’un bracelet capteur d’émotions en Bluetooth. 
                 | Réalisation des cartes électroniques, soudures, services web, serveur de récupération des données en temps réel, applications mobiles, firmware, form-factor en 3D... 
               p.skills
-                | ( Objective-C, Swift, Node.js, MQTT, Electron, HTML5, CSS, JavaScript, C, C++, Eagle... )
+                | (Objective-C, Swift, Node.js, MQTT, Electron, HTML5, CSS, JavaScript, C, C++, Eagle...)
             
             li
               h4 
@@ -135,15 +148,15 @@ html( lang="fr-BE" )
                   time( datetime="2012-09-01" ) Septembre 2012 
                   | - 
                   time( datetime="2014-12-30" ) Décembre 2014 
-                p
-                  | Développeur de jeux vidéo chez 
-                  a( href="https://www.ubisoft.com/", rel="external" ) Ubisoft 
-                  | ( Lille/Paris, France )
+              p.title
+                | Développeur de jeux vidéo chez 
+                a( href="https://www.ubisoft.com/", rel="nofollow" ) Ubisoft 
+                | (Lille/Paris, France)
 
               p.description
                 | Membre de l’équipe de développement du jeu «Ozen»
               p.skills
-                | ( AS3/Flex, AIR, JSFL, C++... )
+                | (AS3/Flex, AIR, JSFL, C++...)
                 
             li
               h4 
@@ -151,15 +164,15 @@ html( lang="fr-BE" )
                   time( datetime="2011-12-30" ) Décembre 2011 
                   | - 
                   time( datetime="2012-08-30" ) Août 2012
-                p
-                  | Développeur multimédia chez 
-                  a( href="http://www.kylii-motion.com/", rel="external" ) Kylii motion 
-                  | ( Lille, France )
+              p.title
+                | Développeur multimédia chez 
+                a( href="http://www.kylii-motion.com/", rel="nofollow" ) Kylii motion 
+                | (Lille, France)
 
               p.description
                 | Développement de jeux en 3D et d’un sdk Flex/AS3/Kinect pour bornes intéractives
               p.skills
-                | ( AS3/Flex, AIR, Shell, HTML5, CSS, JavaScript, C++, sockets, 3ds Max... )
+                | (AS3/Flex, AIR, Shell, HTML5, CSS, JavaScript, C++, sockets, 3ds Max...)
                 
             li
               h4 
@@ -167,15 +180,15 @@ html( lang="fr-BE" )
                   time( datetime="2011-07-01" ) Juillet 
                   | - 
                   time( datetime="2011-12-30" ) Décembre 2011
-                p
-                  | Développeur multimédia chez 
-                  a( href="http://www.v-cult.com/", rel="external" ) V-Cult 
-                  | ( Lille, France )
+              p.title
+                | Développeur multimédia chez 
+                a( href="http://www.v-cult.com/", rel="nofollow" ) V-Cult 
+                | (Lille, France)
 
               p.description
                 | Développement et intégration intégrale d’applications sur Facebook
               p.skills
-                | ( AS3/Flex, PHP, MySQL, JavaScript... )
+                | (AS3/Flex, PHP, MySQL, JavaScript...)
                 
             li
               h4 
@@ -183,17 +196,17 @@ html( lang="fr-BE" )
                   time( datetime="2011-02-01" ) Février 
                   | - 
                   time( datetime="2011-05-30" ) Mai 2011
-                p
-                  | Stage de fin d’étude chez 
-                  a( href="http://www.v-cult.com/", rel="external" ) V-Cult 
-                  | ( Lille, France )
+              p.title
+                | Stage de fin d’étude chez 
+                a( href="http://www.v-cult.com/", rel="nofollow" ) V-Cult 
+                | (Lille, France)
 
               p.description
                 | Modélisation/Skinning et Développement des UV de personnages pour «Beloola»
               p.description
                 | Développement et intégration d’un quizz musical sur Facebook
               p.skills
-                | ( 3ds Max, AS3, PHP, MySQL, JavaScript... )
+                | (3ds Max, AS3, PHP, MySQL, JavaScript...)
             
             li
               h4 
@@ -203,15 +216,15 @@ html( lang="fr-BE" )
                   time( datetime="2008-08-15" ) Aout 2008 
                   | et 
                   time( datetime="2009-08-15" ) 2009
-                p
-                  | Travail d’étudiant chez 
-                  a( href="http://www.com2b.be/", rel="external" ) Com2b Networks 
-                  | ( Bruxelles, Belgique )
+              p.title
+                | Travail d’étudiant chez 
+                a( href="http://www.com2b.be/", rel="nofollow" ) Com2b Networks 
+                | (Bruxelles, Belgique)
 
               p.description
                 | Intégration et développement AS3.
         
-        section#parcours
+        section#perso
           h3 Projet personnel
           ol.content
             li
@@ -219,67 +232,78 @@ html( lang="fr-BE" )
                 .time 
                   | Depuis 
                   time( datetime="2014-09-01" ) Septembre 2014
-                p 
-                  | Concepteur de 
-                  a( href="http://www.sikwi.com/", rel="external" ) Sikwi 
+              p 
+                | Concepteur de 
+                a( href="http://www.sikwi.com/", rel="external" ) Sikwi 
                 
               p.description
-                | Création et conception d'un écosystême open-source de capteurs électroniques grands publics liés à la domotique. 
-                | Cartes électroniques de base en Wifi, BLE, NRF24 ou USB; shields de toutes sortes; 
-                | serveur de récupération de données en temps-réel sur le cloud;
-                | programmes de configuration de capteurs; serveur de build sur le cloud...
+                | Création et conception d'un écosystème open-source de capteurs électroniques grands publics. 
+                | Cartes électroniques de base en WiFi, 
+                abbr(title="Bluetooth Low Energy") BLE
+                | , NRF24 ou USB; shields de toutes sortes liés pour la plupart à la domotique; 
+                | serveur de récupération et d'envoi de données en temps-réel sur le cloud avec gestion de scénario; 
+                | programmes de configuration de capteurs; Serveur de build sur le cloud; 
+                | boitiers soignés imprimables en 3D pour les différents capteurs...
               p.skills
-                | ( Eagle, Node.js, MQTT, Electron, NW.js, PhoneGap/Cordova, HTML5, CSS, JavaScript, C, C++, Docker... )
+                | (Eagle, Fusion360, Node.js, MongoDB, MQTT, Docker, Electron, NW.js, PhoneGap/Cordova, HTML5, CSS, JavaScript, C, C++...)
                   
         section.col#programming-languages
           h3 Langages
           dl.content
             dt Application
             dd
-              | AIR 15, iOS natif ( Objective-C/Swift ), Electron, NW.js, PhoneGap/Cordova, C++, Qt...
+              | Electron, iOS natif (Objective-C / Swift), AIR 15, NW.js, PhoneGap / Cordova, C++, Qt...
             
             dt Client
             dd
-              | HTML5, CSS3, Less, Sass, JavaScript, jQuery, Ajax, Jade, Handelbars, JSON, XML...
+              | HTML5, CSS3, Less, Sass, Stylus, JavaScript, jQuery, Aurelia, React, Ajax, Jade, Handelbars, JSON, XML...
             
             dt Serveur
             dd
-              | Node.js ( express... ), Bash, PHP, MySQL, PostgresQL, Docker, MQTT, Grunt...
+              | Node.js, MongoDB, PHP, MySQL, PostgresQL, MQTT...
               
-            dt Flash Platform
+            dt AIR Platform
             dd
               | AS2, AS3, Flex 4.5+, Starling, Away3D, Flare3D, Alternativa3D, AMFPHP, RobotLegs, ANT...
               
             dt 3D
             dd
-              | MEL...
+              | MEL
+            
+            dt Outils
+            dd
+              | Bash, Docker, Grunt, Gulp...
 
         section.col#tools
           h3 Outils &amp; Méthodologies
           dl.content
             dt Adobe Creative Suite CC
             dd
-              | Flash, Illustrator, Photoshop, InDesign, After Effects, Premiere Pro...
+              | Animate, Illustrator, Photoshop, InDesign, After Effects, Premiere Pro...
             
             dt IDE
             dd
-              | Xcode, Atom, Sublime Text, Eclipse, Flash Builder, Flash Develop, QtCreator...
+              | Atom, Xcode, Sublime Text, Eclipse, QtCreator...
             
             dt 3D
             dd
-              | 3DsMax, Maya, ZBrush, Nuke...
-              
-            dt Electronique et Domotique
+              | Fusion360, 3DsMax, Maya, ZBrush, Nuke...
+                
+            dt Électronique et domotique
             dd
-              | Eagle, Arduino, AVRDUDE, Ino/Arturo, Fritzing, Jeedom, Domoticz...
+              | Eagle, Atmel Studio, Arduino, AVRDUDE, PlatformIO, Fritzing, Jeedom, Domoticz...
             
-            dt Automatisation
+            dt Gestion de versions
             dd
-              | Mercurial, Git, SVN...
+              | Git, Mercurial, SVN...
               
             dt Méthodologies
             dd
-              | Scrum...
+              | Scrum
+          
+            dt Imprimantes 3D
+            dd
+              | Cura, Simplify3D, MeshMixer...
         
         section.col#languages
           h3 Langues
@@ -299,17 +323,17 @@ html( lang="fr-BE" )
         section.col#systems
           h3 Systèmes
           dl.content
-            dt Mac OSX
+            dt MacOS
             dd
-              | 10.5 jusqu'à 10.10 ( système principal )
+              | 10.5 jusqu'à 10.12 (système principal)
             
             dt Windows
             dd
-              | XP jusqu'à 8
+              | XP jusqu'à 10
               
             dt Linux
             dd
-              | Shell, Debian, Ubuntu, Arch Linux, Raspian...
+              | Debian, Ubuntu, Arch Linux, Raspian...
         
         section#others
           h3 Divers
@@ -317,15 +341,27 @@ html( lang="fr-BE" )
             li
               h4 
                 | Centres d’intérêt : 
-              p Développement et électronique DIY
-              p Musique ( batterie, percussions, LiveLooping... )
+              p Développement open-source
+              p Maker (impression 3D, conception mécanique, design produit, automatisation, robotique, open-hardware...)
               p Nouvelles technologies...
-              p Sport ( fitness, course... )
+              p Musique (batterie, percussions, LiveLooping...)
+              p Sport (fitness, course...)
           
             li
-              h4 
+              h4
                 | Permis de conduire
-              p Voiture Catégorie B, Trottinette Catégorie Z
+              p Voiture catégorie B, Trottinette catégorie Z
             
       footer
         a( href="http://julien.delnatte.be" ) julien.delnatte.be
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

@@ -46,7 +46,7 @@ h3 {
   h3::before {
     content: "*";
     margin-right: 0.1em;
-    color: #221555;
+    color: #0d47a1;
     font-weight: 900; }
   h3 a {
     color: black;
@@ -72,13 +72,13 @@ footer {
     left: 112px;
     z-index: 35;
     transform: rotate(-45deg);
-    color: #221555;
-    font-weight: bold;
+    color: white;
+    font-weight: lighter;
     text-decoration: none; }
 
 @media screen and (min-width: 30rem) {
   body {
-    background-color: #9d9d9d;
+    background-color: #333;
     margin-top: 2em; }
   h1 {
     margin: 0;
