@@ -168,7 +168,9 @@ footer {
     width: 800px; } }
 
 @media print {
-  section#distinctions, section#parcours {
+  body {
+    font: 67% Myriad Pro, Helvetica, sans-serif; }
+  section#parcours {
     page-break-after: always; }
   header h1 {
     font-size: 45pt; }

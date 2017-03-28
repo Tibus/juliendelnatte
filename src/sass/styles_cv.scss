@@ -211,7 +211,12 @@ footer{
 }
 
 @media print{
-  section#distinctions, section#parcours{
+  
+  body{
+    font: 67% $font-stack;
+  }
+  
+  section#parcours{
     page-break-after: always;}
     
   header h1{
