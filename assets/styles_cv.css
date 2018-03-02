@@ -1,6 +1,10 @@
+* {
+  font-weight: lighter; }
+
 body {
   margin: 0;
-  font: 100% Myriad Pro, Helvetica, sans-serif; }
+  font: 100% Helvetica, Myriad Pro, sans-serif;
+  font-weight: lighter; }
 
 .page {
   position: relative;
@@ -29,28 +33,22 @@ header h1 {
   margin: 0.67em 0;
   width: 100%;
   font-size: 3em;
-  font-weight: lighter;
   text-align: center; }
 
 header .lineThrough {
   text-decoration: line-through; }
 
-header h2 {
-  font-weight: 100; }
-
 figure {
   text-align: center; }
 
 h2 {
-  font-weight: normal;
   font-size: 1.5em;
   text-align: center; }
 
 section h3 {
   margin: .75em 0 .25em 0.5em;
   text-indent: -0.5em;
-  font-size: 1.5em;
-  font-weight: normal; }
+  font-size: 1.5em; }
   section h3::before {
     content: "*";
     margin-right: 0.1em;
@@ -58,11 +56,8 @@ section h3 {
     font-weight: 900; }
 
 section h4 {
-  margin: 0 0 0.2em 0;
-  font-weight: normal;
+  margin: 0;
   font-size: 1em; }
-  section h4 p {
-    font-weight: normal; }
 
 section .content {
   margin: 0 0 0 1.5em;
@@ -72,7 +67,7 @@ section ol {
   margin: 0;
   list-style: none; }
   section ol li {
-    margin: 0 0 0.5em; }
+    margin: 0 0 0.8em; }
 
 section a {
   color: #0d47a1;
@@ -82,11 +77,10 @@ section a {
 section p {
   margin: 0 0 .2em 2em;
   text-indent: -1em;
-  font-weight: lighter;
   line-height: 1.2em; }
 
 section .title {
-  font-weight: 400; }
+  font-weight: normal; }
 
 section#identity p {
   margin-left: 0;
@@ -99,10 +93,12 @@ section#identity p {
 section#others {
   clear: both; }
 
+section .skills {
+  font-style: italic; }
+
 section dd {
   margin: 0 0 0.3em 0.5em;
   padding: 0;
-  font-weight: lighter;
   line-height: 1.2em; }
 
 footer {
@@ -120,7 +116,6 @@ footer {
     z-index: 35;
     transform: rotate(-45deg);
     color: white;
-    font-weight: lighter;
     text-decoration: none; }
 
 @media screen and (min-width: 40rem), print {
@@ -133,7 +128,6 @@ footer {
       padding: 0.2em 0 0;
       width: 100%;
       font-size: 5em;
-      font-weight: lighter;
       text-align: right;
       line-height: 1em; }
     header h2 {
@@ -169,7 +163,7 @@ footer {
 
 @media print {
   body {
-    font: 67% Myriad Pro, Helvetica, sans-serif; }
+    font: 67% Helvetica, Myriad Pro, sans-serif; }
   section#parcours {
     page-break-after: always; }
   header h1 {

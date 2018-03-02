@@ -1,4 +1,4 @@
-$font-stack: Myriad Pro, Helvetica, sans-serif;
+$font-stack: Helvetica, Myriad Pro, sans-serif;
 $background-color: #333;
 
 $page-color-top: rgba(255,255,255, 0.25);
@@ -6,9 +6,14 @@ $page-color-bottom: rgb(240,240,240);
 
 $dark-blue-color: #0d47a1;
 
+*{
+  font-weight: lighter
+}
+
 body {
   margin: 0;
-  font: 100% $font-stack;}
+  font: 100% $font-stack;
+  font-weight: lighter}
 
 .page{
   position: relative;
@@ -40,7 +45,6 @@ header{
     margin: 0.67em 0;
     width: 100%;
     font-size: 3em;
-    font-weight: lighter;
     text-align: center;}
     
     .lineThrough{
@@ -48,7 +52,6 @@ header{
     }
   
   h2{
-    font-weight: 100;
   }
 }
 
@@ -57,7 +60,6 @@ figure{
   text-align: center;}
 
 h2{
-  font-weight: normal;
   font-size: 1.5em;
   text-align: center;}
 
@@ -66,7 +68,6 @@ section{
     margin: .75em 0 .25em 0.5em;
     text-indent: -0.5em;
     font-size: 1.5em;
-    font-weight: normal;
 
     &::before{
       content: "*";
@@ -76,12 +77,10 @@ section{
   }//h3
 
   h4{
-    margin: 0 0 0.2em 0;
-    font-weight: normal;
+    margin: 0;
     font-size: 1em;
 
-    p{
-      font-weight: normal;}
+    p{}
   }
 
   .content{
@@ -93,7 +92,7 @@ section{
     list-style: none;
 
     li{
-      margin: 0 0 0.5em;}
+      margin: 0 0 0.8em;}
   }
 
   a{
@@ -104,11 +103,10 @@ section{
   p{
     margin: 0 0 .2em 2em;
     text-indent: -1em;
-    font-weight: lighter;
     line-height: 1.2em;}
     
   .title{
-    font-weight: 400;}
+    font-weight: normal}
 
   &#identity p{
     margin-left: 0;
@@ -124,11 +122,13 @@ section{
   
   &#others{
     clear: both;}
-  
+
+  .skills{
+    font-style: italic}
+
   dd{
     margin: 0 0 0.3em 0.5em;
     padding: 0;
-    font-weight: lighter;
     line-height: 1.2em;}
 }
 
@@ -148,7 +148,6 @@ footer{
     z-index: 35;
     transform: rotate(-45deg);
     color:white;
-    font-weight: lighter;
     text-decoration: none;}
 }
 
@@ -164,7 +163,6 @@ footer{
       padding: 0.2em 0 0;
       width: 100%;
       font-size: 5em;
-      font-weight: lighter;
       text-align: right;
       line-height: 1em;}
       
