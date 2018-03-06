@@ -161,11 +161,13 @@ footer {
     margin: 3em auto 3em;
     width: 800px; } }
 
+@media screen {
+  .printOnly {
+    display: none; } }
+
 @media print {
   body {
     font: 67% Helvetica, Myriad Pro, sans-serif; }
-  section#parcours {
-    page-break-after: always; }
   header h1 {
     font-size: 45pt; }
   .page::before {

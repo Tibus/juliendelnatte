@@ -244,6 +244,7 @@ html( lang="fr-BE" )
               h4.title
                 | Concepteur de&nbsp;
                 a( href="http://www.sikwi.io/", rel="external" ) Sikwi
+                  span.printOnly &nbsp;(http://sikwi.io)
                 | &nbsp;depuis&nbsp;
                 time( datetime="2014-09-01" ) septembre 2014
               p.description
@@ -260,8 +261,9 @@ html( lang="fr-BE" )
             li
               h4.title
                 | Concepteur de la&nbsp;
-                a( href="http://mocka.atheris.eu/", rel="external" ) Mocka&nbsp;
-                | en collaboration avec&nbsp;
+                a( href="http://mocka.atheris.eu/", rel="external" ) Mocka
+                  span.printOnly &nbsp;(http://mocka.atheris.eu/)
+                | &nbsp;en collaboration avec&nbsp;
                 a( href="http://www.atheris.eu/", rel="external" ) Atheris
                 | &nbsp;depuis&nbsp;
                 time( datetime="2017-05-01" ) mai 2017
@@ -386,12 +388,11 @@ html( lang="fr-BE" )
         a( href="http://julien.delnatte.be" ) julien.delnatte.be
         
         
-        
-        
-        
-        
-        
-        
-        
-        
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-115171679-1")
+    script
+      |  window.dataLayer = window.dataLayer || [];
+      |  function gtag(){dataLayer.push(arguments);}
+      |  gtag('js', new Date());
+      |  gtag('config', 'UA-115171679-1');
+
         
