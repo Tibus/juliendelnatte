@@ -1,0 +1,235 @@
+$font-stack: Helvetica, Myriad Pro, sans-serif;
+$background-color: #AAA;
+
+$page-color-top: rgba(255,255,255, 0.25);
+$page-color-bottom: rgb(240,240,240);
+
+$dark-blue-color: #0d47a1;
+
+*{
+  font-weight: lighter
+}
+
+body {
+  margin: 0;
+  font: 100% $font-stack;
+  font-weight: lighter}
+
+.page{
+  position: relative;
+  padding: 1em;
+  overflow: hidden;
+  background-color: $page-color-bottom;
+  background-image: url("lightpaperfibers.png");
+
+  &::before{
+    content:"";
+    position: absolute;
+    height: 500px;
+    width: 200%;
+    top: -100px;
+    left: -70%;
+    z-index: 5;
+    background: $page-color-top;
+    box-shadow: 0 0 10px $page-color-top;
+    border-radius: 100%;}
+}
+
+main{
+  position: relative;
+  z-index: 10;
+  margin-bottom: 140px;}
+
+header{
+  h1 {
+    margin: 0.67em 0;
+    width: 100%;
+    font-size: 3em;
+    text-align: center;}
+    
+    .lineThrough{
+      text-decoration: line-through;
+    }
+  
+  h2{
+  }
+}
+
+
+figure{
+  text-align: center;}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;}
+
+section{
+  h3{
+    margin: .75em 0 .25em 0.5em;
+    text-indent: -0.5em;
+    font-size: 1.5em;
+
+    &::before{
+      content: "*";
+      margin-right: 0.1em;
+      color:$dark-blue-color;
+      font-weight: 900;}
+  }//h3
+
+  h4{
+    margin: 0;
+    font-size: 1em;
+
+    p{}
+  }
+
+  .content{
+    margin: 0 0 0 1.5em;
+    padding: 0;}
+
+  ol{
+    margin: 0;
+    list-style: none;
+
+    li{
+      margin: 0 0 0.8em;}
+  }
+
+  a{
+    color: $dark-blue-color;
+    text-decoration: none;
+    font-weight: bold;}
+
+  p{
+    margin: 0 0 .2em 2em;
+    text-indent: -1em;
+    line-height: 1.2em;}
+    
+  .title{
+    font-weight: normal}
+
+  &#identity p{
+    margin-left: 0;
+    text-indent: 0;
+
+    &.strong, .strong{
+      font-weight: normal;
+    }
+
+    a{
+      font-weight: normal;}
+  }
+  
+  &#others{
+    clear: both;}
+
+  .skills{
+    font-style: italic}
+
+  dd{
+    margin: 0 0 0.3em 0.5em;
+    padding: 0;
+    line-height: 1.2em;}
+}
+
+footer{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 250px;
+  height: 250px;
+  background: url("curl.png");
+
+  a{
+    display: block;
+    position: absolute;
+    top: 162px;
+    left: 115px;
+    z-index: 35;
+    transform: rotate(-45deg);
+    color:white;
+    text-decoration: none;}
+}
+
+@media screen and (min-width: 40rem), print {
+  main{
+    margin-bottom: 0px;}
+
+  header{
+    margin-right: 240px;
+
+    h1{
+      margin: 0;
+      padding: 0.2em 0 0;
+      width: 100%;
+      font-size: 5em;
+      text-align: right;
+      line-height: 1em;}
+      
+      h2{
+        text-align: right;}
+      
+      h3{
+        text-align: left;}
+      
+  }
+
+  section#others{
+    margin-right: 150px;}
+
+  figure{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0;}
+}
+
+@media screen and (min-width: 48rem) {
+  main{
+    margin-bottom: 0px;}
+
+  .page{
+    padding: 2em;}
+
+  section.col{
+    float: left;
+    width: 31%;
+    margin-right: 2.333%;}
+}
+
+@media screen and (min-width: 60rem) {
+  body{
+    background-color: $background-color;
+    background-image: url("./assets/background.png");}
+
+  .page{
+    padding: 3em;
+    margin: 3em auto 3em;
+    width: 800px;}
+}
+
+
+@media screen {
+  .printOnly{
+    display: none;
+  }
+}
+
+@media print{
+  
+  body{
+    font: 67% $font-stack;
+  }
+
+  header h1{
+    font-size: 45pt;
+  }
+
+  .page::before{
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+}
