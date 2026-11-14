@@ -12,7 +12,7 @@ html( lang="fr-BE" )
     meta( property="twitter:card", content="summary" )/
     meta( property="twitter:title", content="Delnatte Julien" )/
     meta( property="twitter:description", content="Site internet de Julien Delnatte" )/
-    meta( property="twitter:image", content="http://julien.delnatte.be/assets/juliendelnatte.jpg" )/
+    meta( property="twitter:image", content="http://julien.delnatte.be/assets/juliendelnatte.png" )/
     meta( property="twitter:creator", content="@juliendelnatte" )/
 
     // Facebook OpenGraph
@@ -20,7 +20,7 @@ html( lang="fr-BE" )
     meta( property="og:title", content="Delnatte Julien" )/
     meta( property="og:site_name", content="julien.delnatte.be" )/
     meta( property="og:description", content="Site internet de Julien Delnatte" )/
-    meta( property="og:image", content="http://julien.delnatte.be/assets/juliendelnatte.jpg" )/
+    meta( property="og:image", content="http://julien.delnatte.be/assets/juliendelnatte.png" )/
     meta( property="og:locale", content="fr_BE" )/
 
     <!--[if lt IE 9]>
@@ -28,6 +28,8 @@ html( lang="fr-BE" )
     <![endif]-->
 
   body
+    - var now = new Date()
+    - var age = now.getFullYear() - 1990 - (now < new Date(now.getFullYear(), 5, 15) ? 1 : 0)
     .page
       main
         header
@@ -35,26 +37,24 @@ html( lang="fr-BE" )
             | Julien Delnatte
 
           h2
-            | Développeur full-stack, électronicien
+            | CTO, développeur full-stack, électronicien
             br/
             del coffee
             |  maker
 
         figure
-          img( alt="Julien Delnatte", src="assets/juliendelnatte.jpg" )
+          img( alt="Julien Delnatte", src="assets/juliendelnatte.png" )
 
 
         section#identity
           h3 Identité
           .content
-            p Né le
-              time( datetime="1990-06-15" ) 15 juin 1990&nbsp;
-              span.strong (35 ans)
+            p Né le #[time( datetime="1990-06-15" ) 15 juin 1990]&nbsp;#[span.strong (#{age} ans)]
             p.strong
               | Adresse :&nbsp;
               a( href="https://www.google.be/maps/place/Liège/@50.F,5,7z" ) Liège (Belgique)
             p.phone.strong
-              | Tel :&nbsp;
+              | Tél. :&nbsp;
               a( href="tel:0032472786675" ) +32 472 78 66 75
             p.mail.strong
               | Mail :&nbsp;
@@ -72,10 +72,10 @@ html( lang="fr-BE" )
                 | -
                 time( datetime="2011-06-30" ) 2011
               p
-                | Bachelor en Techniques Infographiques à la Haute Ecole de la Province de Liège
+                | Bachelor en Techniques Infographiques à la Haute École de la Province de Liège
 
               p.description
-                | PFE : Réalisation d'un jeux vidéo 3D temps-réel sur Facebook (BuroCrazy)
+                | PFE : Réalisation d'un jeu vidéo 3D temps réel sur Facebook (BuroCrazy)
               p.skills
                 | (Maya, AS3, Flash, MySQL, PHP, HTML5, CSS, JavaScript...)
 
@@ -85,11 +85,7 @@ html( lang="fr-BE" )
                 | -
                 time( datetime="2008-06-30" ) 2008
               p
-                | 5
-                sup ème
-                | et 6
-                sup ème
-                | secondaires : Qualification en Infographie à l’Institut St-Luc Liège
+                | 5#[sup e] et 6#[sup e] secondaires : qualification en Infographie à l’Institut St-Luc Liège
 
         section#distinctions
           h3 Distinctions
@@ -98,7 +94,7 @@ html( lang="fr-BE" )
               h4
                 time( datetime="2011-06-30" ) 2011
               p
-                | Graduat obtenu avec grande distinction, prix du Collège Provincial de Liège et prix Fernand Petit
+                | Graduat obtenu avec grande distinction, prix du Collège provincial de Liège et prix Fernand Petit
 
             li
               h4
@@ -112,25 +108,57 @@ html( lang="fr-BE" )
             li
               h4
                 .time
-                  time( datetime="2017-05-08" ) Août 2018
+                  time( datetime="2025-06-01" ) Juin 2025
                   | - ...
               p.title
-                | Co-Fondateur, CTO et Directeur de l'innovation chez&nbsp;
-                a( href="http://www.mango3d.io", rel="nofollow" ) Mango3d&nbsp;
-                | (Paris/Bordeaux, France et Liège, Belgique)
+                | Cofondateur et CTO à&nbsp;
+                a( href="https://lafabriquebordelaise.com/", rel="nofollow" ) La Fabrique Bordelaise&nbsp;
+                | (Bordeaux, France)
               p.description
-                | Développement de programmes de préparation d'impression 3D (Lychee Slicer).
-                | Développement de systèmes d'exploitations et de cartes électroniques pour gérer des imprimantes 3D.
-
+                | Usine de fabrication de jouets pour enfants.
+                | Sculpture et design des jouets, packaging, développement d'un programme de gestion de stock et de parc d'imprimantes 3D (plus de 50 imprimantes)...
               p.skills
-                | (TypeScript, ThreeJS, C++, Electron, React, Redux, ImmutableJS, ThreeJS, Golang, Eagle,...)
+                | (Nomad Sculpt, Fusion 360, VectorCraft, PhotoCraft, impression 3D, TypeScript...)
 
             li
               h4
                 .time
-                  time( datetime="2017-01-06" ) Juin 2017
+                  time( datetime="2024-09-01" ) Septembre 2024
+                  | - ...
+              p.title
+                | Cofondateur et CTO chez&nbsp;
+                a( href="https://mesclementines.com/", rel="nofollow" ) Mes Clémentines&nbsp;
+                | (Liège, Belgique)
+              p.description
+                | Micro-entreprise familiale de fabrication de jouets et décorations pour enfants en impression 3D, découpe laser...
+                | Sculpture et design des jouets, graphisme et gestion de la production par impression 3D (7 imprimantes).
+              p.skills
+                | (Nomad Sculpt, Fusion 360, VectorCraft, PhotoCraft, impression 3D, TypeScript...)
+
+            li
+              h4
+                .time
+                  time( datetime="2018-08-01" ) Août 2018
                   | -
-                  time( datetime="2018-04-08" ) Août 2018
+                  time( datetime="2027-01-01" ) Janvier 2027
+              p.title
+                | Cofondateur, CTO et directeur de l'innovation chez&nbsp;
+                a( href="http://www.mango3d.io", rel="nofollow" ) Mango3d&nbsp;
+                | (Paris/Bordeaux, France et Liège, Belgique)
+              p.description
+                | Développement de programmes de préparation d'impression 3D (Lychee Slicer)
+                | et d'une bibliothèque de modèles 3D de créateurs (Lychee Library).
+                | Développement de systèmes d'exploitation et de cartes électroniques pour gérer des imprimantes 3D.
+
+              p.skills
+                | (TypeScript, ThreeJS, C++, Electron, React, Redux, ImmutableJS, Golang, Eagle...)
+
+            li
+              h4
+                .time
+                  time( datetime="2017-06-01" ) Juin 2017
+                  | -
+                  time( datetime="2018-08-01" ) Août 2018
               p.title
                 | Développeur de jeux vidéo chez&nbsp;
                 a( href="http://www.gaming1.com/", rel="nofollow" ) Gaming1&nbsp;
@@ -138,30 +166,30 @@ html( lang="fr-BE" )
               p.description
                 | Développement de jeux vidéo web/mobiles dans le domaine des jeux de casino en ligne
               p.skills
-                | (Dart, HTML5,...)
+                | (Dart, HTML5...)
 
             li
               h4
                 .time
                   time( datetime="2016-06-01" ) Juin 2016
                   | -
-                  time( datetime="2017-27-03" ) Mars 2017
+                  time( datetime="2017-03-27" ) Mars 2017
               p.title
                 | Développeur full-stack et électronicien chez&nbsp;
                 a( href="http://www.dagoma.fr/", rel="nofollow" ) Dagoma&nbsp;
                 | (Lille, France)
               p.description
                 | Développement d'applications permettant la simplification de l'utilisation d'une imprimante 3D.
-                | Développement de cartes électroniques et de produits complets sur mesure (électronique, boitier imprimé, software...)
+                | Développement de cartes électroniques et de produits complets sur mesure (électronique, boîtier imprimé, software...)
               p.skills
-                | (Electron, Python, Eagle, Fusion360, Node.js, HTML5, CSS3, JavaScript...)
+                | (Electron, Python, Eagle, Fusion 360, Node.js, HTML5, CSS3, JavaScript...)
 
             li
               h4
                 .time
                   time( datetime="2015-01-01" ) Janvier 2015
                   | -
-                  time( datetime="2016-06-30" ) Mai 2016
+                  time( datetime="2016-05-31" ) Mai 2016
               p.title
                 | Développeur full-stack et électronicien chez&nbsp;
                 a( href="http://www.neotrope.fr/", rel="nofollow" ) Néotrope&nbsp;
@@ -184,7 +212,7 @@ html( lang="fr-BE" )
                 | (Lille/Paris, France)
 
               p.description
-                | Membre de l’équipe de développement du jeu «Ozen»
+                | Membre de l’équipe de développement du jeu «&nbsp;Ozen&nbsp;»
               p.skills
                 | (AS3/Flex, AIR, JSFL, C++, HTML5, CSS, JavaScript...)
 
@@ -200,7 +228,7 @@ html( lang="fr-BE" )
                 | (Lille, France)
 
               p.description
-                | Développement de jeux en 3D et d’un sdk Flex/AS3/Kinect pour bornes intéractives
+                | Développement de jeux en 3D et d’un SDK Flex/AS3/Kinect pour bornes interactives
               p.skills
                 | (AS3/Flex, AIR, Shell, HTML5, CSS, JavaScript, C++, sockets, 3ds Max...)
 
@@ -216,7 +244,7 @@ html( lang="fr-BE" )
                 | (Lille, France)
 
               p.description
-                | Développement et intégration intégrale d’applications sur Facebook
+                | Développement et intégration complète d’applications sur Facebook
               p.skills
                 | (AS3/Flex, PHP, MySQL, JavaScript...)
 
@@ -227,14 +255,14 @@ html( lang="fr-BE" )
                   | -
                   time( datetime="2011-05-30" ) Mai 2011
               p.title
-                | Stage de fin d’étude chez
+                | Stage de fin d’études chez&nbsp;
                 a( href="http://www.v-cult.com/", rel="nofollow" ) V-Cult&nbsp;
                 | (Lille, France)
 
               p.description
-                | Modélisation/Skinning et développement des UV de personnages pour «Beloola»
+                | Modélisation/Skinning et développement des UV de personnages pour «&nbsp;Beloola&nbsp;»
               p.description
-                | Développement et intégration d’un quizz musical sur Facebook
+                | Développement et intégration d’un quiz musical sur Facebook
               p.skills
                 | (3ds Max, AS3, PHP, MySQL, JavaScript...)
 
@@ -243,9 +271,8 @@ html( lang="fr-BE" )
                 .time
                   time( datetime="2008-07-15" ) Juillet
                   | -
-                  time( datetime="2008-08-15" ) Aout 2008
-                  | et
-                  time( datetime="2009-08-15" ) 2009
+                  time( datetime="2008-08-15" ) Août 2008
+                  |  et #[time( datetime="2009-08-15" ) 2009]
               p.title
                 | Travail d’étudiant chez&nbsp;
                 a( href="http://www.com2b.be/", rel="nofollow" ) Com2b Networks&nbsp;
@@ -265,16 +292,14 @@ html( lang="fr-BE" )
                 | &nbsp;depuis&nbsp;
                 time( datetime="2014-09-01" ) septembre 2014
               p.description
-                | Création d'un écosystème open-source de capteurs électroniques grands publics.
+                | Création d'un écosystème open-source de capteurs électroniques grand public.
               p.description
-                | Cartes électroniques de base en WiFi,
-                abbr(title="Bluetooth Low Energy") BLE
-                | , NRF24 ou USB; shields de toutes sortes liés pour la plupart à la domotique;
-                | serveur de récupération, d'affichage et d'envoi de données en temps réel sur le cloud; gestion de scénarios;
-                | programme de configuration de capteurs; serveur de build sur le cloud;
-                | boitiers soignés imprimables en 3D...
+                | Cartes électroniques de base en Wi-Fi, #[abbr(title="Bluetooth Low Energy") BLE], NRF24 ou USB&nbsp;; shields de toutes sortes liés pour la plupart à la domotique&nbsp;;
+                | serveur de récupération, d'affichage et d'envoi de données en temps réel sur le cloud&nbsp;; gestion de scénarios&nbsp;;
+                | programme de configuration de capteurs&nbsp;; serveur de build sur le cloud&nbsp;;
+                | boîtiers soignés imprimables en 3D...
               p.skills
-                | (Node.js, MongoDB, MQTT, Docker, Electron, NW.js, PhoneGap/Cordova, HTML5, CSS, JavaScript, Aurélia, C, C++, Eagle, Fusion360...)
+                | (Node.js, MongoDB, MQTT, Docker, Electron, NW.js, PhoneGap/Cordova, HTML5, CSS, JavaScript, Aurelia, C, C++, Eagle, Fusion 360...)
             li
               h4.title
                 | Concepteur de la&nbsp;
@@ -289,10 +314,10 @@ html( lang="fr-BE" )
                 | Création d'une imprimante 3D résine autonome.
 
               p.description
-                | Mécanique de l'imprimante de type reprap; shield pour raspberry pi, matrice de leds custom, programme de préparation d'impression (slicer avec auto-orientation, auto-supports, infill...) et système d'exploitation sur mesure;
+                | Mécanique de l'imprimante de type RepRap&nbsp;; shield pour Raspberry Pi, matrice de LED sur mesure, programme de préparation d'impression (slicer avec auto-orientation, auto-supports, infill...) et système d'exploitation sur mesure.
 
               p.skills
-                | (Fusion360, Eagle, Electron, ThreeJS, React, Redux, Stylus, Python... )
+                | (Fusion 360, Eagle, Electron, ThreeJS, React, Redux, Stylus, Python...)
 
         section.col#programming-languages
           h3 Langages
@@ -303,11 +328,11 @@ html( lang="fr-BE" )
 
             dt Client
             dd
-              | HTML5, CSS3, Less, Sass, Stylus, TypeScript, JavaScript, Dart, jQuery, Aurelia, React, Redux, ImmutableJS, ThreeJS, Ajax, Jade, Handelbars, JSON, XML...
+              | ThreeJS, TypeScript, React, HTML5, CSS3, Less, Sass, Stylus, JavaScript, Dart, jQuery, Redux, ImmutableJS, Ajax, Jade, Handlebars, Aurelia, JSON, XML...
 
             dt Serveur
             dd
-              | Node.js, Golang, MongoDB, PHP, MySQL, PostgresQL, MQTT...
+              | Node.js, Golang, MongoDB, PHP, MySQL, PostgreSQL, MQTT, AWS, Firebase...
 
             dt AIR Platform
             dd
@@ -324,9 +349,9 @@ html( lang="fr-BE" )
         section.col#tools
           h3 Outils &amp; Méthodologies
           dl.content
-            dt Adobe Creative Suite CC
+            dt Graphisme
             dd
-              | Animate, Illustrator, Photoshop, InDesign, After Effects, Premiere Pro...
+              | Figma, Animate, Illustrator, Photoshop, InDesign, After Effects, Premiere Pro...
 
             dt IDE
             dd
@@ -334,7 +359,7 @@ html( lang="fr-BE" )
 
             dt 3D
             dd
-              | Fusion360, 3DsMax, Maya, ZBrush, Nuke...
+              | Fusion 360, Nomad Sculpt, Maya, 3ds Max, Nuke...
 
             dt Électronique et domotique
             dd
@@ -342,7 +367,7 @@ html( lang="fr-BE" )
 
             dt Gestion de versions
             dd
-              | Git, Github, Mercurial, SVN...
+              | Git, GitHub, Mercurial, SVN...
 
             dt Méthodologies
             dd
@@ -350,9 +375,9 @@ html( lang="fr-BE" )
 
             dt Imprimantes 3D
             dd
-              | Lychee Slicer, Bambu Studio, Prusa Slicer, Orca Slicer, Cura, Simplify3D, MeshMixer...
+              | Lychee Slicer, Bambu Studio, Snapmaker Orca, PrusaSlicer, OrcaSlicer, Cura, Simplify3D, Meshmixer...
             dd
-              | BambuLab A1, Creality Ender 3 S1 Pro, Voron 350, Anycubic Kobra 2 Max, Neptune 4, Creality CR-10, Creality Ender3, Wanhao D7/D8, Lotus 3D EZ, Phrozen Shuffle, MockaPrinter, Dagoma DiscoEasy200, Dagoma DiscoVery200...
+              | Bambu Lab A1/A1 mini/X1 Carbon/A2L/P1S, Snapmaker U1, Creality Ender 3 S1 Pro, Voron 350, Anycubic Kobra 2 Max, Neptune 4, Creality CR-10, Creality Ender 3, Wanhao D7/D8, Lotus 3D EZ, Phrozen Shuffle, MockaPrinter, Dagoma DiscoEasy200, Dagoma DiscoVery200...
 
         section.col#languages
           h3 Langues
@@ -363,12 +388,12 @@ html( lang="fr-BE" )
 
             dt Anglais
             dd
-              | Niveau B2 - connaissances avancées, maîtrise du langage technique
+              | Niveau B2 – connaissances avancées, maîtrise du langage technique
 
         section.col#systems
           h3 Systèmes
           dl.content
-            dt MacOS
+            dt macOS
             dd
               | système principal
 
@@ -378,7 +403,7 @@ html( lang="fr-BE" )
 
             dt Linux
             dd
-              | Debian, Ubuntu, Arch Linux, Raspian...
+              | Debian, Ubuntu, Arch Linux, Raspbian...
 
         section#others
           h3 Divers
@@ -389,8 +414,9 @@ html( lang="fr-BE" )
               p Développement open-source
               p Maker (impression 3D, conception mécanique, design produit, automatisation, robotique, open-hardware...)
               p Nouvelles technologies...
+              p Plongée sous-marine (candidat 2* CMAS)
               p Musique (batterie, percussions,...)
-              p Sport (fitness, course...)
+              p Sport (badminton, fitness...)
 
             li
               h4
